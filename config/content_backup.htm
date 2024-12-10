@@ -36,7 +36,7 @@
 <p>上列 iframe 標註的 html 語法:</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;iframe width="600" height="400" src="https://nbviewer.org/urls/mde.tw/cp2024_hw/downloads/01_string_input_print.ipynb"&gt;&lt;/iframe&gt;</pre>
 <p>完成上述流程整理後, 請將 HW1 自評分數輸入 cp2024 自評表單中.</p>
-<h1>HW 1 Exam</h1>
+<h2>HW 1 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 Topic 1 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <h3>Brthon建立</h3>
@@ -56,7 +56,7 @@
 <p><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/52dc55d55052c30c94ca46093028cbe1/raw/803a9aea40c9d0ba0b136b6c8971b8639d37ca2e/w12_1">w12_1</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src='//www.youtube.com/embed/cDSg_2Cpw_U?si=Wo-DeTN7U_IDbcHT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;' width="560"></iframe></p>
 <p>第一題:01_string_input_print</p>
-<p><span>Text, questions, and art (文字、問題和藝術)</span></p>
+<p><span>Text, questions, and art (文字、問題和藝術) </span></p>
 <p><span>說明:Strings, input(), and print() (字串、input()和print())</span></p>
 <p><span>input() 範例 <a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/847de027d8c1a1ad8492a3c08354637e/raw/94d0616b2c1899080dccc53388e1321dee8fb353/w12_01_string_input_print">Where are you from?</a></span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">input("Where are you from?")</pre>
@@ -66,16 +66,67 @@ print (" &gt;^.^&lt;   ")
 print ("  / \    ")
 print (" (___)___")</pre>
 <p><span>第二題:02_variables</span></p>
-<p><span>Events and favorites(活動和最愛)</span></p>
+<p><span>Q1:Events and favorites(活動和最愛)</span></p>
 <p><span>說明:Variables and string concatenation(變數和字串連接)</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">first_name = "Fernando" # 將 "Fernando" 賦值給變數 first_name
 last_name = "Pérez"       # 將 "Pérez" 賦值給變數 last_name
 
 print(first_name)            # 輸出變數 first_name 的值，也就是 "Fernando"
 print(last_name)            # 輸出變數 last_name 的值，也就是 "Pérez"</pre>
-<p><br/><br/><br/><br/></p>
-<h2>w13</h2>
-<h3>w13_hw</h3>
+<p>Q2 <a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/3931620d4c7b7f11768871131e3e333b/raw/d0513790969583ed51dc1eedbf210aeb4aaf171d/w12_01_string_input_print_2-2">名字+最愛的食物</a></p>
+<div class="line number1 index0 alt2">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">name = input("What's your name?") #變數name為input所輸入之文字
+favorite_food = input ("What is your favorite food?") #變數favorite_food為input所輸入之文字
+print ("Hi! My name is " + name) #列印"Hi! My name is "(這段為文字) + name(name這個變數的數值)
+print ("My favorite food is " + favorite_food)  #列印"My favorite food is "(這段為文字) + favorite_food(favorite_food這個變數的數值)
+print (name + "'s favorite food is " + favorite_food) #列印name (數值)+ 's favorite food is (此段為文字)+favorite_food(數值)</pre>
+</div>
+<div class="line number1 index0 alt2"></div>
+<div class="line number1 index0 alt2">第三題: (if)判斷式</div>
+<p>Q3: <a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/773294daedf60ffae01686097801c45b/raw/a5ccb23be05d05ad96e2f735a8bbb3adc36335e2/w12%252003_list_if_in_else">bookstor</a></p>
+<div>
+<div class="line number1 index0 alt2">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">programming_books = ["Learn python", "Python for all",  "Intro to python"] #programming_books變數裡面有3個字串
+print (programming_books) #列印programming_books變數(會出現三個字串)
+wanted_book = input("Hi! What book would you like to buy?") #設定一個變數為wanted_book其等於input指令回傳之數值
+print (wanted_book) #列印wanted_book變數
+if wanted_book in programming_books: #如果 "變數wanted_book"回傳之值 在"programming_books"字串當中
+   print ("Yes, we sell it!")       #列印 是的我們有販賣
+else:                            #反之   
+    print ("Sorry, we don't sell that book") #列印 抱歉我們沒有販賣</pre>
+</div>
+</div>
+<p>第四題:append() remove()<br/>Q4:<a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/c0e9f698d59cf8ac8274d6e34424c012/raw/6bd73cd53f93325e4b5c8aeaaf13133c569874d0/w12%252004_list_append_remove">購物清單</a></p>
+<div>
+<div class="line number1 index0 alt2">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">shopping_list = ["carrots", "chocolate", "olives"] #在shopping_list變數裡面有3個字串
+print (shopping_list) #列印shopping_list變數
+new_item = input("What else do I have to buy?") #設定一個變數為new_item其等於input指令回傳之數值
+ 
+if new_item in shopping_list:  #如果 "變數new_item(想買的物品)"回傳之值 在"shopping_list(購物清單)"字串當中就執行以下程式
+    print (new_item + " is/are already in the shopping list") #列印 "new_item變數的數值"+字串is/are already in the shopping list
+    print (shopping_list) #列印shopping_list字串
+else:                    #反之
+    shopping_list.append(new_item) #購物清單.加入(想要購買的物品)    如果不在購物清單內那就將未在字串中物品加入購物清單
+    print (shopping_list) #列印購物清單
+#以下是移除物品的程式
+item_to_remove = input("What do I have to remove?") #item_to_remove(想要移除的物品)
+ 
+if item_to_remove in shopping_list: #如果 想要移除的物品在購物清單中 那就執行
+    shopping_list.remove(item_to_remove) #把購物清單.移除(想要移除的物品)
+    print (shopping_list) #列印購物清單
+else:                     #反之
+    print (item_to_remove + " is/are not in the list") #列印 想要移除的物品+is/are not in the list(不在清單中)
+    print (shopping_list) #列印購物清單
+</pre>
+<p>第五題:index() pop() insert()</p>
+<p></p>
+</div>
+</div><h2>w13</h2>
+<h3>W13_hw</h3>
+<p></p>
+<p>作業一 程式:</p>
+<p>解</p>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -106,14 +157,126 @@ ctx.lineTo(100,100)
 ctx.stroke()
 </script>
 </p>
-<h1>HW 2</h1>
-<h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
-<p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
-<hr/>
-<p>延續 HW 1 網頁資料整理與程式練習方法, 整理下列內容 (20%):</p>
-<p>PART 2: Introduction to lists and if/else statements</p>
-<p>PART 3: Introduction to the for loop</p>
-<p>完成上述流程整理後, 請將 HW2 自評分數輸入 cp2024 自評表單中.</p>
+<p>作業二 程式:</p>
+<!--啟動Brython-->
+<p>
+<script>
+-window.onload=function(){
+brython({debug:1,pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+</p>
+<div id="brython_div1"></div>
+<p>
+<script type="text/python">
+from browser import html
+from browser import document as doc
+canvas = html.CANVAS(width=400,height=400)
+brython_div = doc["brython_div1"]
+brython_div <= canvas
+ctx=canvas.getContext("2d")
+
+ctx.lineWidth = 1
+ctx.strokeStyle = 'blue'
+ctx.beginPath()
+ctx.moveTo(10,10)
+ctx.lineTo(100,100)
+ctx.stroke()
+</script>
+作業三 程式: <!-- 啟動 Brython --></p>
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+</script>
+<script type="text/python3">
+from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width=600, height=600) # 調整畫布大小以容納圓形
+brython_div = doc["brython_div1"]
+brython_div <= canvas
+
+ctx = canvas.getContext("2d")
+ctx.lineWidth = 1
+
+# 1. 繪製兩個矩形 (紅色邊框)
+ctx.strokeStyle = 'red' # 設定矩形的邊框顏色為紅色
+ctx.beginPath()
+ctx.rect(100, 100, 200, 200) # 第一個正方形的左上角在(100, 100)，邊長200
+ctx.rect(200, 200, 200, 200) # 第二個正方形的左上角在(200, 200)，邊長200
+ctx.stroke()
+
+# 2. 繪製對角線 (藍色) - 只連接第一個矩形的左上角和第一個矩形的右下角
+ctx.strokeStyle = 'blue' # 設定對角線顏色為藍色
+ctx.beginPath()
+ctx.moveTo(100, 100) # 起點為第一個矩形的左上角 (100, 100)
+ctx.lineTo(300, 300) # 終點為第一個矩形的右下角 (300, 300)
+ctx.stroke()
+
+# 3. 繪製兩個外切圓 (黑色)
+ctx.strokeStyle = 'black' # 設定圓的顏色為黑色
+
+# 第一個矩形的外切圓
+ctx.beginPath()
+ctx.arc(200, 200, 141.4, 0, 2 * 3.14) # 圓心在(200, 200)，半徑為141.4（sqrt(2) * 邊長的一半）
+ctx.stroke()
+
+# 第二個矩形的外切圓
+ctx.beginPath()
+ctx.arc(300, 300, 141.4, 0, 2 * 3.14) # 圓心在(300, 300)，半徑為141.4
+ctx.stroke()
+</script>
+</p>
+<p><!-- 啟動 Brython --></p>
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+</script>
+<script type="text/python3">
+from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width=600, height=600) # 調整畫布大小以容納圓形
+brython_div = doc["brython_div1"]
+brython_div <= canvas
+
+ctx = canvas.getContext("2d")
+ctx.lineWidth = 1
+
+# 1. 繪製兩個矩形 (紅色邊框)
+ctx.strokeStyle = 'red' # 設定矩形的邊框顏色為紅色
+ctx.beginPath()
+ctx.rect(100, 100, 200, 200) # 第一個正方形的左上角在(100, 100)，邊長200
+ctx.rect(200, 200, 200, 200) # 第二個正方形的左上角在(200, 200)，邊長200
+ctx.stroke()
+
+# 2. 繪製對角線 (藍色) - 只連接第一個矩形的左上角和第一個矩形的右下角
+ctx.strokeStyle = 'blue' # 設定對角線顏色為藍色
+ctx.beginPath()
+ctx.moveTo(100, 100) # 起點為第一個矩形的左上角 (100, 100)
+ctx.lineTo(300, 300) # 終點為第一個矩形的右下角 (300, 300)
+ctx.stroke()
+
+# 3. 繪製兩個外切圓 (黑色)
+ctx.strokeStyle = 'black' # 設定圓的顏色為黑色
+
+# 第一個矩形的外切圓
+ctx.beginPath()
+ctx.arc(200, 200, 141.4, 0, 2 * 3.14) # 圓心在(200, 200)，半徑為141.4（sqrt(2) * 邊長的一半）
+ctx.stroke()
+
+# 第二個矩形的外切圓
+ctx.beginPath()
+ctx.arc(300, 300, 141.4, 0, 2 * 3.14) # 圓心在(300, 300)，半徑為141.4
+ctx.stroke()
+</script>
+</p><h1>HW 2</h1>
 <h2>HW 2 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 2 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
