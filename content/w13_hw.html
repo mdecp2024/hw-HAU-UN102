@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Attendance.html'>Attendance</a><li class='has-children'><a href='HW 1.html'>HW 1</a><ul class='dropdown'><li class='has-children'><a href='HW 1 Exam.html'>HW 1 Exam</a><ul class='dropdown'><li><a href='Brthon建立.html'>Brthon建立</a><li><a href='w10.html'>w10</a><li><a href='w11_hw.html'>w11_hw</a><li><a href='w12_hw.html'>w12_hw</a><li><a href='W13_hw.html'>W13_hw</a><li><a href='w14_hw.html'>w14_hw</a></li></li></ul></ul><li class='has-children'><a href='HW 2.html'>HW 2</a><ul class='dropdown'><li><a href='HW 2 Exam.html'>HW 2 Exam</a></li></ul><li class='has-children'><a href='HW 3.html'>HW 3</a><ul class='dropdown'><li><a href='HW 3 Exam.html'>HW 3 Exam</a></li></ul><li class='has-children'><a href='HW 4.html'>HW 4</a><ul class='dropdown'><li><a href='HW 4 Exam.html'>HW 4 Exam</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Attendance.html'>Attendance</a><li class='has-children'><a href='HW 1.html'>HW 1</a><ul class='dropdown'><li class='has-children'><a href='HW 1 Exam.html'>HW 1 Exam</a><ul class='dropdown'><li><a href='Brthon建立.html'>Brthon建立</a><li><a href='w10.html'>w10</a><li><a href='w11_hw.html'>w11_hw</a><li><a href='w12_hw.html'>w12_hw</a><li><a href='w13_hw.html'>w13_hw</a><li><a href='w14_hw.html'>w14_hw</a></li></li></ul></ul><li class='has-children'><a href='HW 2.html'>HW 2</a><ul class='dropdown'><li><a href='HW 2 Exam.html'>HW 2 Exam</a></li></ul><li class='has-children'><a href='HW 3.html'>HW 3</a><ul class='dropdown'><li><a href='HW 3 Exam.html'>HW 3 Exam</a></li></ul><li class='has-children'><a href='HW 4.html'>HW 4</a><ul class='dropdown'><li><a href='HW 4 Exam.html'>HW 4 Exam</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,91 +141,92 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w12_hw << <a href='w12_hw.html'>Previous</a> <a href='w14_hw.html'>Next</a> >> w14_hw<br /><h1>W13_hw</h1>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 導入 brython 程式庫 --&gt;
-&lt;p&gt;
-&lt;script src="./../cmsimde/static/brython.js"&gt;&lt;/script&gt;
-&lt;script src="./../cmsimde/static/brython_stdlib.js"&gt;&lt;/script&gt;
-&lt;/p&gt;
-&lt;!-- 啟動 Brython --&gt;
-&lt;p&gt;
-&lt;script&gt;// &lt;![CDATA[
+    <div id="tipue_search_content">w12_hw << <a href='w12_hw.html'>Previous</a> <a href='w14_hw.html'>Next</a> >> w14_hw<br /><h1>w13_hw</h1>
+<p><a href="https://gist.githubusercontent.com/HAU-UN102/f2c9958fc15dcc510246c2845c4614cd/raw/391e77efd9e2592a02d6b1526291939b86447cc5/w13">程式</a></p>
+<!-- 導入 brython 程式庫 -->
+<p>
+<script src="./../cmsimde/static/brython.js"></script>
+<script src="./../cmsimde/static/brython_stdlib.js"></script>
+</p>
+<!-- 啟動 Brython -->
+<p>
+<script>
 window.onload=function(){
 brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 }
-// ]]&gt;&lt;/script&gt;
-&lt;/p&gt;
-&lt;div id="brython_div1"&gt;&lt;/div&gt;
-&lt;p&gt;
-&lt;script type="text/python3"&gt;// &lt;![CDATA[
+</script>
+</p>
+<div id="brython_div1"></div>
+<p>
+<script type="text/python3">
 from browser import html
 from browser import document as doc
 import math
-
+  
 canvas = html.CANVAS(width=500, height=500)
 brython_div = doc["brython_div1"]
-brython_div &lt;= canvas
-
+brython_div <= canvas
+  
 ctx = canvas.getContext("2d")
 ctx.lineWidth = 4
-
+ 
 #混色的
 ctx.globalCompositeOperation = "screem"
-
-
+ 
+ 
 #黑邊圓*2(每個畫四個邊邊)
-ctx.strokeStyle = 'Gold'
+ctx.strokeStyle = 'black'
 #第一個圓
 ctx.beginPath()
 ctx.arc(160, 160, 141, 0.25 * math.pi,0.75 * math.pi)
 ctx.fillStyle = "Turquoise"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.arc(160, 160, 141, 0.75 * math.pi,1.25 * math.pi)
-ctx.fillStyle = "Mint green"
+ctx.fillStyle = "Tomato"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.arc(160, 160, 141, 1.25 * math.pi,1.75 * math.pi)
-ctx.fillStyle = "Pink"
+ctx.fillStyle = "SpringGreen"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.arc(160, 160, 141, 1.75 * math.pi,0.25 * math.pi)
 ctx.fillStyle = "FloralWhite"
 ctx.fill()
 ctx.stroke()
-
+ 
 #第二個圓
 ctx.beginPath()
 ctx.arc(260, 260, 141, 1.25 * math.pi,1.75 * math.pi)
 ctx.fillStyle = "Purple"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.arc(260, 260, 141, 1.75 * math.pi,0.25 * math.pi)
 ctx.fillStyle = "OliveDrab"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.arc(260, 260, 141, 0.25 * math.pi,0.75 * math.pi)
-ctx.fillStyle = "Ocean blue"
+ctx.fillStyle = "Orange"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.arc(260, 260, 141, 0.75 * math.pi,1.25 * math.pi)
 ctx.fillStyle = "MediumVioletRed"
 ctx.fill()
 ctx.stroke()
-
-
+ 
+ 
 #紅方形*2(4個三角形)
 ctx.strokeStyle = 'red'
 ctx.beginPath()
@@ -235,7 +236,7 @@ ctx.lineTo(260,260)
 ctx.fillStyle = "Gold"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.moveTo(60,60)
 ctx.lineTo(260,60)
@@ -243,7 +244,7 @@ ctx.lineTo(260,260)
 ctx.fillStyle = "Indigo"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.moveTo(160,160)
 ctx.lineTo(360,160)
@@ -251,7 +252,7 @@ ctx.lineTo(360,360)
 ctx.fillStyle = "Cyan"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.moveTo(160,160)
 ctx.lineTo(160,360)
@@ -259,8 +260,8 @@ ctx.lineTo(360,360)
 ctx.fillStyle = "SpringGreen"
 ctx.fill()
 ctx.stroke()
-
-
+ 
+  
 #重疊的小方型
 ctx.beginPath()
 ctx.moveTo(160,160)
@@ -269,7 +270,7 @@ ctx.lineTo(260,260)
 ctx.fillStyle = "Turquoise"
 ctx.fill()
 ctx.stroke()
-
+ 
 ctx.beginPath()
 ctx.moveTo(160,160)
 ctx.lineTo(260,160)
@@ -277,16 +278,16 @@ ctx.lineTo(260,260)
 ctx.fillStyle = "SlateBlue"
 ctx.fill()
 ctx.stroke()
-
-
+ 
+ 
 #籃斜線
 ctx.strokeStyle = 'blue'
-ctx.beginPath()
+ctx.beginPath() 
 ctx.moveTo(60, 60)
 ctx.lineTo(260, 260)
-ctx.stroke()// ]]&gt;&lt;/script&gt;
-&lt;/p&gt;</pre>
-<br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='w14_hw.html'>Next</a> >> w14_hw</div>
+ctx.stroke()
+</script>
+</p><br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='w14_hw.html'>Next</a> >> w14_hw</div>
         
     <!-- footer -->
       <div class="container">
