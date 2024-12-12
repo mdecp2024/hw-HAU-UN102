@@ -139,7 +139,151 @@ print (todays_menu) #列印今日菜單</pre>
 </div>
 </div><h2>w13</h2>
 <h3>W13_hw</h3>
-<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 導入 brython 程式庫 --&gt;
+&lt;p&gt;
+&lt;script src="/static/brython.js"&gt;&lt;/script&gt;
+&lt;script src="/static/brython_stdlib.js"&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;!-- 啟動 Brython --&gt;
+&lt;p&gt;
+&lt;script&gt;// &lt;![CDATA[
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+// ]]&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;div id="brython_div1"&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;script type="text/python3"&gt;// &lt;![CDATA[
+from browser import html
+from browser import document as doc
+import math
+
+canvas = html.CANVAS(width=500, height=500)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+ctx = canvas.getContext("2d")
+ctx.lineWidth = 4
+
+#混色的
+ctx.globalCompositeOperation = "screem"
+
+
+#黑邊圓*2(每個畫四個邊邊)
+ctx.strokeStyle = 'Gold'
+#第一個圓
+ctx.beginPath()
+ctx.arc(160, 160, 141, 0.25 * math.pi,0.75 * math.pi)
+ctx.fillStyle = "Turquoise"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(160, 160, 141, 0.75 * math.pi,1.25 * math.pi)
+ctx.fillStyle = "Mint green"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(160, 160, 141, 1.25 * math.pi,1.75 * math.pi)
+ctx.fillStyle = "Pink"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(160, 160, 141, 1.75 * math.pi,0.25 * math.pi)
+ctx.fillStyle = "FloralWhite"
+ctx.fill()
+ctx.stroke()
+
+#第二個圓
+ctx.beginPath()
+ctx.arc(260, 260, 141, 1.25 * math.pi,1.75 * math.pi)
+ctx.fillStyle = "Purple"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(260, 260, 141, 1.75 * math.pi,0.25 * math.pi)
+ctx.fillStyle = "OliveDrab"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(260, 260, 141, 0.25 * math.pi,0.75 * math.pi)
+ctx.fillStyle = "Ocean blue"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(260, 260, 141, 0.75 * math.pi,1.25 * math.pi)
+ctx.fillStyle = "MediumVioletRed"
+ctx.fill()
+ctx.stroke()
+
+
+#紅方形*2(4個三角形)
+ctx.strokeStyle = 'red'
+ctx.beginPath()
+ctx.moveTo(60,60)
+ctx.lineTo(60,260)
+ctx.lineTo(260,260)
+ctx.fillStyle = "Gold"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(60,60)
+ctx.lineTo(260,60)
+ctx.lineTo(260,260)
+ctx.fillStyle = "Indigo"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(360,160)
+ctx.lineTo(360,360)
+ctx.fillStyle = "Cyan"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(160,360)
+ctx.lineTo(360,360)
+ctx.fillStyle = "SpringGreen"
+ctx.fill()
+ctx.stroke()
+
+
+#重疊的小方型
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(160,260)
+ctx.lineTo(260,260)
+ctx.fillStyle = "Turquoise"
+ctx.fill()
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(260,160)
+ctx.lineTo(260,260)
+ctx.fillStyle = "SlateBlue"
+ctx.fill()
+ctx.stroke()
+
+
+#籃斜線
+ctx.strokeStyle = 'blue'
+ctx.beginPath()
+ctx.moveTo(60, 60)
+ctx.lineTo(260, 260)
+ctx.stroke()// ]]&gt;&lt;/script&gt;
+&lt;/p&gt;</pre>
+<p><br/><br/></p>
 <p>
 <script src="/get_page/cmsimde/static/brython.js"></script>
 <script src="/get_page/cmsimde/static/brython_stdlib.js"></script>
