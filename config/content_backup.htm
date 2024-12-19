@@ -299,6 +299,22 @@ sum += i # sum = sum + i 的簡寫
 
 # 顯示結果
 print(f"從 {init} 累加到 {upto} 的總和是: {sum}")</pre>
+<p>題目二:<a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/53126928112944add50ae8391b5697e6/raw/909b10f6f0c68583c8e6314f199dd1e37e0ad92b/w15_02">addto</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義函數 addto
+def addto(start, end):
+# 初始化累加結果變數
+total = 0
+
+# 使用 for 迴圈進行累加
+for i in range(start, end + 1):
+total += i # sum = sum + i 的簡寫
+
+# 返回總和
+return total
+
+# 呼叫函數並顯示結果
+result = addto(1, 100)
+print(f"從 1 累加到 100 的總和是: {result}")</pre>
 <p><br/><br/></p>
 <p><br/><br/><br/></p><h1>HW 2</h1>
 <h2>HW 2 Exam</h2>
