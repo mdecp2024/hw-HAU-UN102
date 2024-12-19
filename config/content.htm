@@ -334,6 +334,24 @@ result = add_only_even(1, 100)
 print(f"從 1 累加到 100 的偶數總和是: {result}")
 
 </pre>
+<p><span>題目四:<a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/94c440284c276a8dd8a8c162f5948e93/raw/722abdee7e128d23e81001975848decc6e5097ce/w15_04">add_avoid_8</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義函式 add_avoid_8
+def add_avoid_8(start, end):
+# 初始化總和變數
+total = 0
+
+# 使用 for 迴圈遍歷範圍
+for i in range(start, end + 1):
+# 檢查數字是否包含 "8"
+if '8' not in str(i): # 如果數字轉為字串後不包含 "8"
+total += i # 累加
+
+# 返回總和
+return total
+
+# 呼叫函數並顯示結果
+result = add_avoid_8(1, 100)
+print(f"從 1 累加到 100 (避開包含 '8' 的數字) 的總和是: {result}")</pre>
 <p><br/><br/></p>
 <p><br/><br/></p><h1>HW 2</h1>
 <h2>HW 2 Exam</h2>
