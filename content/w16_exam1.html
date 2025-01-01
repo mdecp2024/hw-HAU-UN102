@@ -2,7 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,10 +141,72 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW 3 << <a href='HW 3.html'>Previous</a> <a href='HW 4.html'>Next</a> >> HW 4<br /><h1>HW 3 Exam</h1>
-<p>每六人為一組進行協同程式練習</p>
-<p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 3 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<br />HW 3 << <a href='HW 3.html'>Previous</a> <a href='HW 4.html'>Next</a> >> HW 4</div>
+    <div id="tipue_search_content">HW 2 Exam << <a href='HW 2 Exam.html'>Previous</a> <a href='w16_exam2.html'>Next</a> >> w16_exam2<br /><h1>w16_exam1</h1>
+<p><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/690555df51958ae93ec4f0183cec80b0/raw/83fb4843d8cb0c171fd13e7ad912aeb60205b954/w16_exam1">程式碼</a></p>
+<p><img caption="false" height="200" src="./../images/w16-1.png" width="483"/></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src='//www.youtube.com/embed/I9-gBTPMaKA?si=mqWd-q_DTprcFVaq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;' width="560"></iframe></p>
+<p><span>這段程式碼適合用來學習 Brython 的基本繪圖操作，以及如何將數學和程式設計相結合。透過這樣的實作過程，不僅能加深對幾何圖形的理解，還能培養處理座標系與視覺化資料的能力。</span></p>
+<script src="./../cmsimde/static/brython.js">
+from browser import document
+from browser.svg import svg, line, text, polygon, rect, circle
+
+# 設定繪圖參數
+origin_x, origin_y = 31, 2  # 修改原點座標
+pixel_size = 2
+
+# 建立繪圖區域
+svg_area = svg(width=500, height=500)
+document <= svg_area
+
+# 繪製 X 軸
+svg_area <= line(x1=origin_x, y1=origin_y, x2=500, y2=origin_y, stroke="black", stroke_width=pixel_size)
+svg_area <= text("X", x=480, y=origin_y + 15, font_size="12px")
+
+# 繪製 Y 軸
+svg_area <= line(x1=origin_x, y1=origin_y, x2=origin_x, y2=500, stroke="black", stroke_width=pixel_size)
+svg_area <= text("Y", x=origin_x - 15, y=490, font_size="12px")
+
+# 標示原點
+svg_area <= text("(31, 02)", x=origin_x + 5, y=origin_y + 15, font_size="12px")
+
+# 繪製圖形
+# 等腰六邊形（準確的等腰六邊形）
+hexagon_points = [
+    (40, 105),  # 左上
+    (60, 70),   # 上中
+    (100, 70),   # 右上
+    (120, 105), # 右下
+    (100, 140),  # 下中
+    (60, 140)   # 左下
+]
+svg_area <= polygon(points=" ".join(f"{x},{y}" for x, y in hexagon_points), fill="orange")
+
+# 菱形（正確位置與比例）
+diamond_points = [
+    (132.5, 105),  # 左
+    (155, 60),  # 上
+    (177.5, 105),  # 右
+    (155, 145)   # 下
+]
+svg_area <= polygon(points=" ".join(f"{x},{y}" for x, y in diamond_points), fill="teal")
+
+# 小型三角形（在菱形右下方）
+triangle_points = [
+    (185, 110),  # 左下
+    (165, 145),  # 頂點
+    (205, 145)   # 右下
+]
+svg_area <= polygon(points=" ".join(f"{x},{y}" for x, y in triangle_points), fill="cyan")
+
+# 圓形
+svg_area <= circle(cx=240, cy=105, r=35, fill="magenta")
+
+# 正方形
+svg_area <= rect(x=290, y=70, width=70, height=70, fill="gold")
+
+# 長方形
+svg_area <= rect(x=380, y=90, width=90, height=30, fill="navy")
+</script><br />HW 2 Exam << <a href='HW 2 Exam.html'>Previous</a> <a href='w16_exam2.html'>Next</a> >> w16_exam2</div>
         
     <!-- footer -->
       <div class="container">

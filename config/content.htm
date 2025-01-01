@@ -373,7 +373,10 @@ print(f"從 1 累加到 100（避開包含 '8' 或 '3' 的數字）的總和是:
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 2 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <h3>w16_exam1</h3>
-<p><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/ebb6e070a93865ebc6886c584e07963d/raw/f2d29a70d792a4694b77683c45a3c448f87b5bef/HW%25202%2520Exam">程式碼</a></p>
+<p><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/690555df51958ae93ec4f0183cec80b0/raw/83fb4843d8cb0c171fd13e7ad912aeb60205b954/w16_exam1">程式碼</a></p>
+<p><img caption="false" height="200" src="/images/w16-1.png" width="483"/></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src='//www.youtube.com/embed/I9-gBTPMaKA?si=mqWd-q_DTprcFVaq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;' width="560"></iframe></p>
+<p><span>這段程式碼適合用來學習 Brython 的基本繪圖操作，以及如何將數學和程式設計相結合。透過這樣的實作過程，不僅能加深對幾何圖形的理解，還能培養處理座標系與視覺化資料的能力。</span></p>
 <script src="/static/brython.js">
 from browser import document
 from browser.svg import svg, line, text, polygon, rect, circle
@@ -435,83 +438,40 @@ svg_area <= rect(x=290, y=70, width=70, height=70, fill="gold")
 # 長方形
 svg_area <= rect(x=380, y=90, width=90, height=30, fill="navy")
 </script><h3>w16_exam2</h3>
-<p><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/ddbfa8e6de35c99cbac9266ae4e81ab9/raw/8c37d227bbde5723e104bd551f61395f9ba6ec1a/HW%25203%2520Exam">程式碼</a></p>
+<p><!-- 導入 brython 程式庫 --></p>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
 </p>
-<!-- 啟動Brython -->
+<p><!-- 啟動 Brython --></p>
 <p>
 <script>
 window.onload=function(){
-    brython({debug:1, pythonpath:['/static/','./../downloads/py/']});  // 設定Brython並加載指定路徑
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 }
 </script>
 </p>
-<div id="brython_div1"></div>
+<div id="brython_div1"><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/ddbfa8e6de35c99cbac9266ae4e81ab9/raw/8c37d227bbde5723e104bd551f61395f9ba6ec1a/HW%25203%2520Exam">程式碼</a></div>
+<div></div>
+<div><img caption="false" height="195" src="/images/w16-2.png" width="190"/></div>
+<div><iframe allowfullscreen="allowfullscreen" height="314" src='//www.youtube.com/embed/FC993Hwe9O0?si=cUopk_nvUOf5VQDa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;' width="560"></iframe></div>
+<div><span>這段程式碼是一個非常實用的練習範例，在學習過程中，我意識到規劃座標系和確定基準點對於準確地繪製圖形是非常重要的。未來可以進一步創造更有趣的互動應用程式。</span></div>
 <p>
-<script type="text/python">
+<script type="text/python3">
 from browser import html
 from browser import document as doc
-
-# 利用 html 建立 canvas 超文件物件
-canvas = html.CANVAS(width=300, height=300)  # 設定迷宮畫布大小
-brython_div = doc["brython_div1"]
-brython_div <= canvas
-
-# 取得 canvas 的繪圖上下文
-ctx = canvas.getContext("2d")
-
-# 標示左上方點座標 (31, 02)
-ctx.font = "12px Arial"
-ctx.fillStyle = "red"
-ctx.fillText("(31, 02)", 35, 15)
-
-# 定義藍色線條的屬性
-ctx.strokeStyle = "blue"
-ctx.lineWidth = 2
-
-# 開始繪製迷宮 (座標偏移以 (31, 02) 為起點)
-offset_x = 31
-offset_y = 2
-
-# 繪製迷宮線條
-ctx.beginPath()
-ctx.moveTo(offset_x + 0, offset_y + 0) 
-ctx.lineTo(offset_x + 86, offset_y + 0)
-ctx.moveTo(offset_x + 0, offset_y + 0)
-ctx.lineTo(offset_x + 0, offset_y + 200)
-ctx.moveTo(offset_x + 120, offset_y + 0)
-ctx.lineTo(offset_x + 200, offset_y + 0)
-ctx.moveTo(offset_x + 200, offset_y + 0)
-ctx.lineTo(offset_x + 200, offset_y + 200)
-ctx.lineTo(offset_x + 120, offset_y + 200)
-ctx.moveTo(offset_x + 200, offset_y + 200)
-ctx.moveTo(offset_x + 0, offset_y + 200) 
-ctx.lineTo(offset_x + 86, offset_y + 200)
-ctx.moveTo(offset_x + 86, offset_y + 157) 
-ctx.lineTo(offset_x + 86, offset_y + 200)
-ctx.moveTo(offset_x + 86, offset_y + 157) 
-ctx.lineTo(offset_x + 126, offset_y + 157)
-ctx.moveTo(offset_x + 160, offset_y + 120) 
-ctx.lineTo(offset_x + 160, offset_y + 200)
-ctx.moveTo(offset_x + 160, offset_y + 120) 
-ctx.lineTo(offset_x + 50, offset_y + 120)
-ctx.moveTo(offset_x + 50, offset_y + 120) 
-ctx.lineTo(offset_x + 50, offset_y + 163)
-ctx.moveTo(offset_x + 126, offset_y + 80) 
-ctx.lineTo(offset_x + 126, offset_y + 120)
-ctx.moveTo(offset_x + 0, offset_y + 80) 
-ctx.lineTo(offset_x + 86, offset_y + 80)
-ctx.moveTo(offset_x + 86, offset_y + 40) 
-ctx.lineTo(offset_x + 86, offset_y + 80)
-ctx.moveTo(offset_x + 40, offset_y + 40) 
-ctx.lineTo(offset_x + 160, offset_y + 40)
-ctx.moveTo(offset_x + 160, offset_y + 40) 
-ctx.lineTo(offset_x + 160, offset_y + 83)
-ctx.stroke()
+import math
+<div id="brython_div1"><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/ddbfa8e6de35c99cbac9266ae4e81ab9/raw/8c37d227bbde5723e104bd551f61395f9ba6ec1a/HW%25203%2520Exam">程式碼</a></div>
+<p>
+<script type="text/python3">
+<p>from browser import html from browser import document as doc # 利用 html 建立 canvas 超文件物件 canvas = html.CANVAS(width=300, height=300) # 設定迷宮畫布大小 brython_div = doc["brython_div1"] brython_div &lt;= canvas # 取得 canvas 的繪圖上下文 ctx = canvas.getContext("2d") # 標示左上方點座標 (31, 2) ctx.font = "12px Arial" ctx.fillStyle = "red" ctx.fillText("(31, 2)", 35, 14) # 定義藍色線條的屬性 ctx.strokeStyle = "blue" ctx.lineWidth = 2 # 開始繪製迷宮 (座標偏移以 (31, 2) 為起點) offset_x = 31 offset_y = 2 # 繪製迷宮線條 ctx.beginPath() ctx.moveTo(offset_x + 0, offset_y + 0) ctx.lineTo(offset_x + 86, offset_y + 0) ctx.moveTo(offset_x + 0, offset_y + 0) ctx.lineTo(offset_x + 0, offset_y + 200) ctx.moveTo(offset_x + 120, offset_y + 0) ctx.lineTo(offset_x + 200, offset_y + 0) ctx.moveTo(offset_x + 200, offset_y + 0) ctx.lineTo(offset_x + 200, offset_y + 200) ctx.lineTo(offset_x + 120, offset_y + 200) ctx.moveTo(offset_x + 200, offset_y + 200) ctx.moveTo(offset_x + 0, offset_y + 200) ctx.lineTo(offset_x + 86, offset_y + 200) ctx.moveTo(offset_x + 86, offset_y + 157) ctx.lineTo(offset_x + 86, offset_y + 200) ctx.moveTo(offset_x + 86, offset_y + 157) ctx.lineTo(offset_x + 126, offset_y + 157) ctx.moveTo(offset_x + 160, offset_y + 120) ctx.lineTo(offset_x + 160, offset_y + 200) ctx.moveTo(offset_x + 160, offset_y + 120) ctx.lineTo(offset_x + 50, offset_y + 120) ctx.moveTo(offset_x + 50, offset_y + 120) ctx.lineTo(offset_x + 50, offset_y + 163) ctx.moveTo(offset_x + 126, offset_y + 80) ctx.lineTo(offset_x + 126, offset_y + 120) ctx.moveTo(offset_x + 0, offset_y + 80) ctx.lineTo(offset_x + 86, offset_y + 80) ctx.moveTo(offset_x + 86, offset_y + 40) ctx.lineTo(offset_x + 86, offset_y + 80) ctx.moveTo(offset_x + 40, offset_y + 40) ctx.lineTo(offset_x + 160, offset_y + 40) ctx.moveTo(offset_x + 160, offset_y + 40) ctx.lineTo(offset_x + 160, offset_y + 83) ctx.stroke()</p>
 </script>
-</p><h1>HW 3</h1>
+</p><h3>w16_exam3</h3>
+<p><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/a6f20bc4bf2afd70a27a74bbb074c80c/raw/c474888ff082764c22e7841019d43260233fa787/w16_exam3">程式碼</a></p>
+<p><img alt="" height="198" src="/images/w16-3.png" width="205"/></p>
+<p></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src='//www.youtube.com/embed/qVFdZEqzY-8?si=Cm86HnwSTxIbZ3YW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;' width="560"></iframe></p>
+<p><span>展示了如何用 Brython 繪製迷宮並解決路徑問題。未來若能加入動態功能和互動性，會是一個完整而有趣的迷宮遊戲基礎架構。</span></p><h1>HW 3</h1>
 <h4>主題: Python 的數字、演算法與迴圈 (20%)</h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 4 and Part 5</p>
 <p>完成上述流程整理後, 請將 HW3 自評分數輸入 cp2024 自評表單中.</p>

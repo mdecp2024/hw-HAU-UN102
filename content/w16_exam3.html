@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Attendance.html'>Attendance</a><li class='has-children'><a href='HW 1.html'>HW 1</a><ul class='dropdown'><li class='has-children'><a href='HW 1 Exam.html'>HW 1 Exam</a><ul class='dropdown'><li><a href='Brthon建立.html'>Brthon建立</a><li><a href='w10.html'>w10</a><li><a href='w11_hw.html'>w11_hw</a><li><a href='w12_hw.html'>w12_hw</a><li><a href='w13_hw.html'>w13_hw</a><li><a href='w14_hw.html'>w14_hw</a><li><a href='w15.html'>w15</a></li></li></ul></ul><li class='has-children'><a href='HW 2.html'>HW 2</a><ul class='dropdown'><li class='has-children'><a href='HW 2 Exam.html'>HW 2 Exam</a><ul class='dropdown'><li><a href='w16_exam2.html'>w16_exam2</a><li><a href='w16_exam3.html'>w16_exam3</a></li></li></ul></ul><li class='has-children'><a href='HW 3.html'>HW 3</a><ul class='dropdown'><li><a href='HW 3 Exam.html'>HW 3 Exam</a></li></ul><li class='has-children'><a href='HW 4.html'>HW 4</a><ul class='dropdown'><li><a href='HW 4 Exam.html'>HW 4 Exam</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Attendance.html'>Attendance</a><li class='has-children'><a href='HW 1.html'>HW 1</a><ul class='dropdown'><li class='has-children'><a href='HW 1 Exam.html'>HW 1 Exam</a><ul class='dropdown'><li><a href='Brthon建立.html'>Brthon建立</a><li><a href='w10.html'>w10</a><li><a href='w11_hw.html'>w11_hw</a><li><a href='w12_hw.html'>w12_hw</a><li><a href='w13_hw.html'>w13_hw</a><li><a href='w14_hw.html'>w14_hw</a><li><a href='w15.html'>w15</a></li></li></ul></ul><li class='has-children'><a href='HW 2.html'>HW 2</a><ul class='dropdown'><li class='has-children'><a href='HW 2 Exam.html'>HW 2 Exam</a><ul class='dropdown'><li><a href='w16_exam1.html'>w16_exam1</a><li><a href='w16_exam2.html'>w16_exam2</a><li><a href='w16_exam3.html'>w16_exam3</a></li></li></ul></ul><li class='has-children'><a href='HW 3.html'>HW 3</a><ul class='dropdown'><li><a href='HW 3 Exam.html'>HW 3 Exam</a></li></ul><li class='has-children'><a href='HW 4.html'>HW 4</a><ul class='dropdown'><li><a href='HW 4 Exam.html'>HW 4 Exam</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,83 +142,11 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w16_exam2 << <a href='w16_exam2.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3<br /><h1>w16_exam3</h1>
-<p><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/ddbfa8e6de35c99cbac9266ae4e81ab9/raw/8c37d227bbde5723e104bd551f61395f9ba6ec1a/HW%25203%2520Exam">程式碼</a></p>
-<p>
-<script src="./../cmsimde/static/brython.js"></script>
-<script src="./../cmsimde/static/brython_stdlib.js"></script>
-</p>
-<!-- 啟動Brython -->
-<p>
-<script>
-window.onload=function(){
-    brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});  // 設定Brython並加載指定路徑
-}
-</script>
-</p>
-<div id="brython_div1"></div>
-<p>
-<script type="text/python">
-from browser import html
-from browser import document as doc
-
-# 利用 html 建立 canvas 超文件物件
-canvas = html.CANVAS(width=300, height=300)  # 設定迷宮畫布大小
-brython_div = doc["brython_div1"]
-brython_div <= canvas
-
-# 取得 canvas 的繪圖上下文
-ctx = canvas.getContext("2d")
-
-# 標示左上方點座標 (31, 02)
-ctx.font = "12px Arial"
-ctx.fillStyle = "red"
-ctx.fillText("(31, 02)", 35, 15)
-
-# 定義藍色線條的屬性
-ctx.strokeStyle = "blue"
-ctx.lineWidth = 2
-
-# 開始繪製迷宮 (座標偏移以 (31, 02) 為起點)
-offset_x = 31
-offset_y = 2
-
-# 繪製迷宮線條
-ctx.beginPath()
-ctx.moveTo(offset_x + 0, offset_y + 0) 
-ctx.lineTo(offset_x + 86, offset_y + 0)
-ctx.moveTo(offset_x + 0, offset_y + 0)
-ctx.lineTo(offset_x + 0, offset_y + 200)
-ctx.moveTo(offset_x + 120, offset_y + 0)
-ctx.lineTo(offset_x + 200, offset_y + 0)
-ctx.moveTo(offset_x + 200, offset_y + 0)
-ctx.lineTo(offset_x + 200, offset_y + 200)
-ctx.lineTo(offset_x + 120, offset_y + 200)
-ctx.moveTo(offset_x + 200, offset_y + 200)
-ctx.moveTo(offset_x + 0, offset_y + 200) 
-ctx.lineTo(offset_x + 86, offset_y + 200)
-ctx.moveTo(offset_x + 86, offset_y + 157) 
-ctx.lineTo(offset_x + 86, offset_y + 200)
-ctx.moveTo(offset_x + 86, offset_y + 157) 
-ctx.lineTo(offset_x + 126, offset_y + 157)
-ctx.moveTo(offset_x + 160, offset_y + 120) 
-ctx.lineTo(offset_x + 160, offset_y + 200)
-ctx.moveTo(offset_x + 160, offset_y + 120) 
-ctx.lineTo(offset_x + 50, offset_y + 120)
-ctx.moveTo(offset_x + 50, offset_y + 120) 
-ctx.lineTo(offset_x + 50, offset_y + 163)
-ctx.moveTo(offset_x + 126, offset_y + 80) 
-ctx.lineTo(offset_x + 126, offset_y + 120)
-ctx.moveTo(offset_x + 0, offset_y + 80) 
-ctx.lineTo(offset_x + 86, offset_y + 80)
-ctx.moveTo(offset_x + 86, offset_y + 40) 
-ctx.lineTo(offset_x + 86, offset_y + 80)
-ctx.moveTo(offset_x + 40, offset_y + 40) 
-ctx.lineTo(offset_x + 160, offset_y + 40)
-ctx.moveTo(offset_x + 160, offset_y + 40) 
-ctx.lineTo(offset_x + 160, offset_y + 83)
-ctx.stroke()
-</script>
-</p><br />w16_exam2 << <a href='w16_exam2.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3</div>
+<p><a href="https://mdecp2024.github.io/hw-HAU-UN102/content/Brython.html?src=https://gist.githubusercontent.com/HAU-UN102/a6f20bc4bf2afd70a27a74bbb074c80c/raw/c474888ff082764c22e7841019d43260233fa787/w16_exam3">程式碼</a></p>
+<p><img alt="" height="198" src="./../images/w16-3.png" width="205"/></p>
+<p></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src='//www.youtube.com/embed/qVFdZEqzY-8?si=Cm86HnwSTxIbZ3YW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;' width="560"></iframe></p>
+<p><span>展示了如何用 Brython 繪製迷宮並解決路徑問題。未來若能加入動態功能和互動性，會是一個完整而有趣的迷宮遊戲基礎架構。</span></p><br />w16_exam2 << <a href='w16_exam2.html'>Previous</a> <a href='HW 3.html'>Next</a> >> HW 3</div>
         
     <!-- footer -->
       <div class="container">
